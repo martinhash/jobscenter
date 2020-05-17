@@ -8,8 +8,6 @@ export class JobsService {
 
   constructor(private http: HttpClient) { }
 
-
-
   getUsaWorks() {
     const httpOptions = {
       headers: {
@@ -18,7 +16,16 @@ export class JobsService {
         'User-Agent': 'martinjoostw@gmail.com'
       }
     };
-    return this.http.get(`https://data.usajobs.gov/api/search?JobCategoryCode=2210`, httpOptions);
+    return this.http.get(`https://data.usajobs.gov/api/search`, httpOptions);
+  }
+
+
+  getTheMuse() {
+    return this.http.get(`https://www.themuse.com/api/public/jobs?page=5`);
+  }
+
+  getJuju() {
+    return this.http.get(`http://api.juju.com/jobs`);
   }
 
 }
