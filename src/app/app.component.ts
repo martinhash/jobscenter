@@ -20,7 +20,9 @@ export class AppComponent {
     // this.jobsService.getJuju().subscribe( resp => {
     //   console.log(resp);
     // });
-
+    this.jobsService.getAdzuna().subscribe( resp => {
+      console.log(resp);
+    });
   }
 
 

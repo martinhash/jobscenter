@@ -28,4 +28,14 @@ export class JobsService {
     return this.http.get(`http://api.juju.com/jobs`);
   }
 
+  getAdzuna() {
+    const httpOptions = {
+      headers: {
+        'Accept': 'application/json',
+      }
+    };
+    return this.http.get(`https://api.adzuna.com/v1/api/jobs/gb/search/10?app_id=f67c13ae&app_key=2b6b1ffb6fdacd0748081fdbc95b91b4`, httpOptions);
+  }
+
+
 }
